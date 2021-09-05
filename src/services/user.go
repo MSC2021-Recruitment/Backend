@@ -22,7 +22,7 @@ func RegisterWithUser(req models.User) (res models.User, err error) {
 
 func LoginWithTel(req *models.User) (res *models.User, err error) {
 	var user models.User
-	err = global.DATABASE.Where("telephone = ?", req.Name).First(&user).Error
+	err = global.DATABASE.Where("telephone = ?", req.Telephone).First(&user).Error
 	if err == nil {
 		if !utils.CheckPasswordHash(req.Password, user.Password) {
 			err = errors.New("password is wrong")

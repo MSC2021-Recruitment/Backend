@@ -12,7 +12,7 @@ type ChangeProfileRequest struct {
 	Major     string `json:"major"`
 	Telephone string `json:"telephone"`
 	QQ        string `json:"qq"`
-	Level     int32  `json:"level"`
+	Level     string `json:"level"`
 	Wanted    string `json:"wanted"`
 	Intro     string `json:"intro"`
 }
@@ -30,7 +30,7 @@ type RegisterRequest struct {
 	Major     string `json:"major"`
 	Telephone string `json:"telephone"`
 	QQ        string `json:"qq"`
-	Level     int32  `json:"level"`
+	Level     string `json:"level"`
 	Wanted    string `json:"wanted"`
 	Intro     string `json:"intro"`
 }

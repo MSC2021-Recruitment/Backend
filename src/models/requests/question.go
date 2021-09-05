@@ -8,6 +8,7 @@ type CreateQuestionRequest struct {
 
 type UpdateQuestionRequest struct {
 	Title   string `json:"title"`
+	Group   string `json:"group"`
 	Content string `json:"content"`
 }
 

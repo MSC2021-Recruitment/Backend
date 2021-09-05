@@ -19,7 +19,7 @@ type User struct {
 	Telephone string `gorm:"unique" json:"telephone"`
 	Email     string `gorm:"unique" json:"email"`
 	QQ        string `gorm:"unique" json:"qq"`
-	Level     int32  `json:"level"`
+	Level     string `json:"level"`
 	Wanted    string `json:"wanted"`
 	Intro     string `json:"intro"`
 }

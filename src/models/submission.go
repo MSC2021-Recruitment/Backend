@@ -1,8 +1,9 @@
 package models
 
 import (
-	"gorm.io/gorm"
 	"time"
+
+	"gorm.io/gorm"
 )
 
 type Submission struct {
@@ -11,8 +12,8 @@ type Submission struct {
 	UpdatedAt      time.Time      `json:"-"`
 	DeletedAt      gorm.DeletedAt `gorm:"index" json:"-"`
 	SubmitterRefer uint           `json:"-"`
-	Submitter      User           `gorm:"foreignKey:SubmitterRefer"`
+	Submitter      User           `gorm:"foreignKey:SubmitterRefer" json:"submitter"`
 	QuestionRefer  uint           `json:"-"`
-	Question       Question       `gorm:"foreignKey:QuestionRefer"`
+	Question       Question       `gorm:"foreignKey:QuestionRefer" json:"question"`
 	Content        string         `json:"content"`
 }

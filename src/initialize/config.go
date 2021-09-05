@@ -19,11 +19,11 @@ func InitConfig() error {
 
 func InitViper() error {
 	v := viper.New()
-	v.SetConfigName("config")              // name of config file (without extension)
-	v.SetConfigType("yaml")                // REQUIRED if the config file does not have the extension in the name
-	v.AddConfigPath("/etc/MessageBoard/")  // path to look for the config file in
-	v.AddConfigPath("$HOME/.MessageBoard") // call multiple times to add many search paths
-	v.AddConfigPath(".")                   // optionally look for config in the working directory
+	v.SetConfigName("config")                   // name of config file (without extension)
+	v.SetConfigType("yaml")                     // REQUIRED if the config file does not have the extension in the name
+	v.AddConfigPath("/etc/MSC2021Recuriment/")  // path to look for the config file in
+	v.AddConfigPath("$HOME/.MSC2021Recuriment") // call multiple times to add many search paths
+	v.AddConfigPath(".")                        // optionally look for config in the working directory
 	if err := v.ReadInConfig(); err != nil {
 		log.Println("Could not access config file. maybe it is not exist?")
 		return err

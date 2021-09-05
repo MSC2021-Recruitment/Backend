@@ -12,9 +12,9 @@ import (
 func LoginRequired() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		var tokenStr string
-		if token := ctx.Request.Header.Get("Authentication"); token != "" {
+		if token := ctx.Request.Header.Get("Authentication"); token == "" {
 			global.LOGGER.Warn("Auth failed, no authentication found")
-			response.FailWithDetailed(gin.H{"login": false}, "Token is Null!", ctx)
+			responses.FailWithDetailed(gin.H{"login": false}, "Token is Null!", ctx)
 			ctx.Abort()
 			return
 		} else {
@@ -23,18 +23,18 @@ func LoginRequired() gin.HandlerFunc {
 		j := utils.NewToken()
 		claims, err := j.ParseToken(tokenStr)
 		if err != nil {
-			response.FailWithDetailed(gin.H{"login": false}, err.Error(), ctx)
+			responses.FailWithDetailed(gin.H{"login": false}, err.Error(), ctx)
 			ctx.Abort()
 			return
 		}
 		whitelistToken, err := services.GetTokenInWhitelist(claims.UserID)
 		if err != nil {
-			response.FailWithDetailed(gin.H{"login": false}, "Token is not in whitelist.", ctx)
+			responses.FailWithDetailed(gin.H{"login": false}, "Token is not in whitelist.", ctx)
 			ctx.Abort()
 			return
 		}
 		if whitelistToken != tokenStr {
-			response.FailWithDetailed(gin.H{"login": false}, "Token is not same with the one in whitelist.", ctx)
+			responses.FailWithDetailed(gin.H{"login": false}, "Token is not same with the one in whitelist.", ctx)
 			ctx.Abort()
 			return
 		}
@@ -45,7 +45,7 @@ func LoginRequired() gin.HandlerFunc {
 			ctx.Header("New-Token", newToken)
 			_ = services.PutTokenInWhitelist(newClaims.UserID, newToken)
 		}
-		ctx.Set("claims", claims)
+		ctx.Set("claims", *claims)
 		ctx.Next()
 	}
 }
