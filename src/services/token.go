@@ -16,3 +16,8 @@ func PutTokenInWhitelist(userName uint, jwt string) (err error) {
 	err = global.REDIS.Set(strconv.FormatUint(uint64(userName), 10), jwt, timer).Err()
 	return err
 }
+
+func ExpireToken(userName uint) (err error) {
+	err = global.REDIS.Del(strconv.FormatUint(uint64(userName), 10)).Err()
+	return err
+}

@@ -1,13 +1,20 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"gorm.io/gorm"
+	"time"
+)
 
 type Question struct {
-	gorm.Model
-	CreatorRefer uint
-	Creator User `gorm:"foreignKey:CreatorRefer"`
+	ID        uint           `gorm:"primarykey" json:"id"`
+	CreatedAt time.Time      `json:"-"`
+	UpdatedAt time.Time      `json:"-"`
+	DeletedAt gorm.DeletedAt `gorm:"index" json:"-"`
 
-	Title string `gorm:"unique"`
-	Content string
-	Group string
+	CreatorRefer uint `json:"-"`
+	Creator      User `gorm:"foreignKey:CreatorRefer"`
+
+	Title   string `gorm:"unique" json:"title"`
+	Content string `json:"content"`
+	Group   string `json:"group"`
 }

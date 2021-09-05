@@ -6,19 +6,20 @@ import (
 )
 
 type User struct {
-	ID        uint `gorm:"primarykey"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt gorm.DeletedAt `gorm:"index"`
+	ID        uint           `gorm:"primarykey" json:"id"`
+	CreatedAt time.Time      `json:"-"`
+	UpdatedAt time.Time      `json:"-"`
+	DeletedAt gorm.DeletedAt `gorm:"index" json:"-"`
 
-	Name      string
-	Password  string
-	Admin     bool
-	Major     string
-	Telephone string `gorm:"unique"`
-	Email     string `gorm:"unique"`
-	QQ        string `gorm:"unique"`
-	Level     int32
-	Wanted    string
-	Intro     string
+	Name      string `json:"name"`
+	Password  string `json:"-"`
+	StudentID string `gorm:"unique" json:"student-id"`
+	Admin     bool   `json:"admin"`
+	Major     string `json:"major"`
+	Telephone string `gorm:"unique" json:"telephone"`
+	Email     string `gorm:"unique" json:"email"`
+	QQ        string `gorm:"unique" json:"qq"`
+	Level     int32  `json:"level"`
+	Wanted    string `json:"wanted"`
+	Intro     string `json:"intro"`
 }

@@ -8,7 +8,7 @@ type ChangePasswordRequest struct {
 type ChangeProfileRequest struct {
 	Name      string `json:"name"`
 	Email     string `json:"email"`
-	Password  string `json:"password"`
+	StudentID string `json:"student-id"`
 	Major     string `json:"major"`
 	Telephone string `json:"telephone"`
 	QQ        string `json:"qq"`
@@ -26,6 +26,7 @@ type RegisterRequest struct {
 	Name      string `json:"name"`
 	Email     string `json:"email"`
 	Password  string `json:"password"`
+	StudentID string `json:"student-id"`
 	Major     string `json:"major"`
 	Telephone string `json:"telephone"`
 	QQ        string `json:"qq"`
