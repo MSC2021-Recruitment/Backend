@@ -62,6 +62,7 @@ func ChangePasswordWithUser(req *models.User, newPassword string) (userInter *mo
 			err = global.DATABASE.First(&user).Update("password", newPassword).Error
 		}
 	}
+	ExpireToken(user.ID)
 	return &user, err
 }
 
@@ -86,6 +87,7 @@ func GetUserProfile(userId uint) (models.User, error) {
 func DeleteUser(userId uint) error {
 	user := models.User{ID: userId}
 	err := global.DATABASE.Delete(&user)
+	ExpireToken(userId)
 	return err.Error
 }
 

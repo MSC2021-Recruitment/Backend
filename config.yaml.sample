@@ -1,0 +1,39 @@
+# jwt configuration
+jwt:
+  signing_key: '<jwt signing key here>'
+  expires_time: 604800
+  buffer_time: 86400
+
+# zap logger configuration
+zap:
+  level: 'info'
+  format: 'console'
+  prefix: '[MSC2021Recruitment] '
+  director: 'log'
+  link_name: 'latest_log'
+  show_line: true
+  encode_level: 'LowercaseColorLevelEncoder'
+  stacktrace_key: 'stacktrace'
+  log_in_console: true
+
+# redis configuration
+redis:
+  db: 0
+  addr: '127.0.0.1:6379'
+  password: ''
+
+# mysql connect configuration
+database:
+  path: '127.0.0.1:3306'
+  config_models: 'parseTime=true'
+  db_name: 'MSC'
+  username: 'reverier'
+  password: '<password here>'
+  max_idle_conns: 10
+  max_open_conns: 100
+  log_mode: false
+  log_zap: "warn"
+
+# local configuration
+local_storage:
+  path: 'uploads/file'
