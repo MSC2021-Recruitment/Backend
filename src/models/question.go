@@ -10,11 +10,11 @@ type Question struct {
 	CreatedAt time.Time      `json:"-"`
 	UpdatedAt time.Time      `json:"-"`
 	DeletedAt gorm.DeletedAt `gorm:"index" json:"-"`
+	CreatorID uint           `json:"user-id"`
 
-	CreatorRefer uint `json:"-"`
-	Creator      User `gorm:"foreignKey:CreatorRefer"`
-
-	Title   string `gorm:"unique" json:"title"`
-	Content string `json:"content"`
-	Group   string `json:"group"`
+	Title         string       `gorm:"unique" json:"title"`
+	Content       string       `json:"content"`
+	Group         string       `json:"group"`
+	Submissions   []Submission `json:"-" gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	AnsweredUsers []*User      `json:"-" gorm:"many2many:users_questions;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }

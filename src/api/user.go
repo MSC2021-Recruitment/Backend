@@ -68,6 +68,7 @@ func AdminChangeUserProfileHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
+	_ = services.ExpireToken(user.ID)
 	responses.Ok(ctx)
 }
 

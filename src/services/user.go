@@ -10,8 +10,10 @@ import (
 
 func RegisterWithUser(req models.User) (res models.User, err error) {
 	var user models.User
-	if !errors.Is(global.DATABASE.Where("telephone = ?", req.Telephone).First(&user).Error, gorm.ErrRecordNotFound) &&
-		!errors.Is(global.DATABASE.Where("email = ?", req.Email).First(&user).Error, gorm.ErrRecordNotFound) {
+	if !errors.Is(global.DATABASE.Where("telephone = ?", req.Telephone).
+		First(&user).Error, gorm.ErrRecordNotFound) &&
+		!errors.Is(global.DATABASE.Where("email = ?", req.Email).
+			First(&user).Error, gorm.ErrRecordNotFound) {
 		return res, errors.New("user is already registered")
 	}
 	req.Password, _ = utils.HashPassword(req.Password)
@@ -50,19 +52,24 @@ func ChangePassword(id uint, oldPassword string, newPassword string) (res *model
 }
 
 func ChangePasswordWithUser(req *models.User, newPassword string) (userInter *models.User, err error) {
+
 	var user = models.User{
 		ID: req.ID,
 	}
 	err = global.DATABASE.First(&user).Error
 	if err == nil {
-		if !utils.CheckPasswordHash(user.Password, req.Password) {
+		if !utils.CheckPasswordHash(req.Password, user.Password) {
 			err = errors.New("password is not true")
+			return nil, err
 		} else {
 			newPassword, _ = utils.HashPassword(newPassword)
 			err = global.DATABASE.First(&user).Update("password", newPassword).Error
 		}
 	}
-	ExpireToken(user.ID)
+	err = ExpireToken(user.ID)
+	if err != nil {
+		return nil, err
+	}
 	return &user, err
 }
 
@@ -86,16 +93,19 @@ func GetUserProfile(userId uint) (models.User, error) {
 
 func DeleteUser(userId uint) error {
 	user := models.User{ID: userId}
-	err := global.DATABASE.Delete(&user)
-	ExpireToken(userId)
-	return err.Error
-}
-
-func ChangeUserProfile(req models.User) error {
-	err := global.DATABASE.First(&req).Error
+	err := global.DATABASE.Delete(&user).Error
+	err = ExpireToken(userId)
 	if err != nil {
 		return err
 	}
-	err = global.DATABASE.Save(req).Error
+	return err
+}
+
+func ChangeUserProfile(req models.User) error {
+	err := global.DATABASE.Model(&models.User{}).
+		Select("*").
+		Omit("password").
+		Omit("create_at").
+		Updates(&req).Error
 	return err
 }

@@ -8,16 +8,8 @@ import (
 
 func GetSubmissionOfQuestion(questionId uint, userId uint) ([]models.Submission, error) {
 	var err error
-	if !utils.IfUserExists(&models.User{ID: userId}) {
-		err = &utils.UserNotFoundError{}
-	}
-	if !utils.IsQuestionExists(&models.Question{ID: questionId}) && err == nil {
-		err = &utils.QuestionNotFoundError{}
-	}
 	var submissions []models.Submission
-	if err == nil {
-		err = global.DATABASE.Where("SubmitterRefer = ? AND QuestionRefer >= ?", userId, questionId).First(&submissions).Error
-	}
+	err = global.DATABASE.Model(&models.Submission{}).Where("user_id = ? AND question_id = ?", userId, questionId).First(&submissions).Error
 	if err != nil {
 		global.LOGGER.Sugar().Warnf("Get user%d's submission of %d failed: %s", userId, questionId, err.Error())
 	}
@@ -33,9 +25,7 @@ func GetSubmittedUserOfQuestion(questionId uint) ([]models.User, error) {
 		return nil, err
 	}
 	var users []models.User
-	err = global.DATABASE.Model(&models.Submission{}).
-		Where("QuestionRefer = ?", questionId).
-		Association("Submitter").Find(&users)
+	err = global.DATABASE.Model(&models.Question{ID: questionId}).Association("AnsweredUsers").Find(&users)
 	if err != nil {
 		return nil, err
 	}

@@ -120,6 +120,7 @@ func ChangeProfileHandler(ctx *gin.Context) {
 	err = services.ChangeUserProfile(models.User{
 		ID:        claims.UserID,
 		Name:      req.Name,
+		Admin:     claims.Admin,
 		StudentID: req.StudentID,
 		Major:     req.Major,
 		Telephone: req.Telephone,

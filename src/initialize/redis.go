@@ -14,13 +14,13 @@ func Redis() *redis.Client {
 		Password: redisCfg.Password, // no password set
 		DB:       redisCfg.DB,       // use default DB
 	})
-	pong, err := client.Ping().Result()
+	result, err := client.Ping().Result()
 	global.LOGGER.Info("Trying to connect Redis on " + redisCfg.Addr)
 	if err != nil {
 		global.LOGGER.Error("Redis connection ping failed, err:", zap.Any("err", err))
 		os.Exit(1)
 	} else {
-		global.LOGGER.Info("Successfully connected to Redis:", zap.String("pong", pong))
+		global.LOGGER.Info("Successfully connected to Redis:", zap.String("ping", result))
 	}
 	return client
 }

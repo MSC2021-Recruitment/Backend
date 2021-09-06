@@ -6,19 +6,20 @@ import (
 	"MSC2021/src/services"
 	"MSC2021/src/utils"
 	"github.com/gin-gonic/gin"
+	"strings"
 	"time"
 )
 
 func LoginRequired() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		var tokenStr string
-		if token := ctx.Request.Header.Get("Authentication"); token == "" {
+		if token := ctx.Request.Header.Get("Authorization"); token == "" {
 			global.LOGGER.Warn("Auth failed, no authentication found")
 			responses.FailWithDetailed(gin.H{"login": false}, "Token is Null!", ctx)
 			ctx.Abort()
 			return
 		} else {
-			tokenStr = token
+			tokenStr = strings.ReplaceAll(token, "Bearer ", "")
 		}
 		j := utils.NewToken()
 		claims, err := j.ParseToken(tokenStr)
@@ -39,6 +40,7 @@ func LoginRequired() gin.HandlerFunc {
 			return
 		}
 		if claims.ExpiresAt-time.Now().Unix() < global.CONFIG.JWT.BufferTime {
+			global.LOGGER.Sugar().Debugf("token is going to be expired: %s -> %s", time.Now().String(), time.Unix(claims.ExpiresAt, 0).String())
 			claims.ExpiresAt = time.Now().Unix() + global.CONFIG.JWT.ExpiresTime
 			newToken, _ := j.CreateToken(*claims)
 			newClaims, _ := j.ParseToken(newToken)

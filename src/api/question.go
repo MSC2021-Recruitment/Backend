@@ -6,8 +6,8 @@ import (
 	"MSC2021/src/models/requests"
 	"MSC2021/src/models/responses"
 	"MSC2021/src/services"
-	"strconv"
 	"github.com/gin-gonic/gin"
+	"strconv"
 )
 
 func GetQuestionListHandler(ctx *gin.Context) {
@@ -143,20 +143,22 @@ func AdminDeleteQuestionHandler(ctx *gin.Context) {
 }
 
 func AdminCreateQuestionHandler(ctx *gin.Context) {
-	id, err := strconv.ParseUint(ctx.Param("id"), 10, 32)
-	if err != nil {
-		responses.FailWithMessage("ID in wrong format.", ctx)
+	claimsRaw, exists := ctx.Get("claims")
+	if !exists {
+		responses.FailWithMessage("Not login yet.", ctx)
 		ctx.Abort()
 		return
 	}
+	claims := claimsRaw.(auth.TokenClaims)
+	userId := claims.UserID
 	var req requests.CreateQuestionRequest
-	err = ctx.ShouldBind(&req)
+	err := ctx.ShouldBind(&req)
 	if err != nil {
 		responses.FailWithMessage("Data is invalid.", ctx)
 		ctx.Abort()
 		return
 	}
-	err = services.AdminCreateQuestion(uint(id), req.Title, req.Group, req.Content)
+	err = services.AdminCreateQuestion(userId, req.Title, req.Group, req.Content)
 	if err != nil {
 		responses.FailWithMessage(err.Error(), ctx)
 		ctx.Abort()

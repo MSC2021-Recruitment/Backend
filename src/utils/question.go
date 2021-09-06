@@ -12,7 +12,7 @@ func (m *QuestionNotFoundError) Error() string {
 }
 
 func IsQuestionExists(req *models.Question) bool {
-	err := global.DATABASE.First(req).Error
+	err := global.DATABASE.First(&req).Error
 	if err != nil {
 		return false
 	} else {

@@ -7,6 +7,7 @@ require (
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
+	github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d
 	github.com/spf13/viper v1.8.1
 	go.uber.org/zap v1.19.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9

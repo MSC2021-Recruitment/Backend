@@ -4,6 +4,8 @@ import (
 	"MSC2021/src/global"
 	"MSC2021/src/initialize/internal"
 	"MSC2021/src/models"
+	"MSC2021/src/services"
+	"github.com/nu7hatch/gouuid"
 	"go.uber.org/zap"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -22,6 +24,43 @@ func InitTables(db *gorm.DB) {
 		os.Exit(1)
 	}
 	global.LOGGER.Info("Successfully registered data models.")
+
+	var superUser []models.User
+	if err = db.Model(&models.User{}).Where("admin = ?", true).Find(&superUser).Error; err != nil || len(superUser) == 0 {
+		global.LOGGER.Info("Admin not found, created it.")
+
+		newSuperUser := models.User{
+			Name:      "admin",
+			StudentID: "00000000000",
+			Admin:     true,
+			Major:     "admin",
+			Telephone: "15900000000",
+			Email:     "admin@xdmsc.club",
+			QQ:        "000000000",
+			Level:     "2019",
+			Wanted:    "admin",
+			Intro:     "admin",
+		}
+
+		uid, err := uuid.NewV4()
+		if uid == nil {
+			global.LOGGER.Error("create super user failed", zap.Any("err", err))
+			os.Exit(1)
+		}
+		global.LOGGER.Sugar().Warnf("Super User: %s %s", newSuperUser.Email, uid.String())
+		if err != nil {
+			global.LOGGER.Error("create super user failed", zap.Any("err", err))
+			os.Exit(1)
+		}
+		newSuperUser.Password = uid.String()
+		_, err = services.RegisterWithUser(newSuperUser)
+		if err != nil {
+			global.LOGGER.Error("create super user failed", zap.Any("err", err))
+			os.Exit(1)
+		}
+	} else {
+		global.LOGGER.Info("Database status recovered.")
+	}
 }
 
 // GormMysql 初始化数据库 *gorm.DB
