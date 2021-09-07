@@ -17,11 +17,6 @@ func GetQuestionListHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
-	if questions == nil {
-		responses.FailWithMessage("No Questions Here.", ctx)
-		ctx.Abort()
-		return
-	}
 	responses.OkWithData(questions, ctx)
 }
 

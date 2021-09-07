@@ -16,9 +16,15 @@ zap:
   stacktrace_key: 'stacktrace'
   log_in_console: true
 
-# redis configuration
-redis:
+# token redis database configuration
+token_redis:
   db: 0
+  addr: '127.0.0.1:6379'
+  password: ''
+
+# interview queue redis database configuration
+queue_redis:
+  db: 1
   addr: '127.0.0.1:6379'
   password: ''
 

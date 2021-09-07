@@ -74,7 +74,6 @@ func RegisterHandler(ctx *gin.Context) {
 		Email:     req.Email,
 		QQ:        req.QQ,
 		Level:     req.Level,
-		Wanted:    req.Wanted,
 		Intro:     req.Intro,
 	})
 	if err != nil {
@@ -127,7 +126,6 @@ func ChangeProfileHandler(ctx *gin.Context) {
 		Email:     req.Email,
 		QQ:        req.QQ,
 		Level:     req.Level,
-		Wanted:    req.Wanted,
 		Intro:     req.Intro,
 	})
 	if err != nil {

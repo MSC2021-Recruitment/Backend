@@ -2,7 +2,8 @@ package config
 
 type ServerConfig struct {
 	JWT          JWT          `yaml:"jwt"`
-	Redis        Redis        `yaml:"redis"`
+	TokenRedis   Redis        `yaml:"token_redis"`
+	QueueRedis   Redis        `yaml:"queue_redis"`
 	LocalStorage LocalStorage `yaml:"local_storage"`
 	Database     MySQL        `yaml:"database"`
 	Zap          Zap          `yaml:"zap"`

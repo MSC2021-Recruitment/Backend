@@ -38,7 +38,6 @@ func InitTables(db *gorm.DB) {
 			Email:     "admin@xdmsc.club",
 			QQ:        "000000000",
 			Level:     "2019",
-			Wanted:    "admin",
 			Intro:     "admin",
 		}
 

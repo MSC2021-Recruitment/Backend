@@ -20,10 +20,13 @@ func main() {
 		"===================================================================================")
 	global.DATABASE = initialize.GormMysql()
 	initialize.InitTables(global.DATABASE)
-	global.REDIS = initialize.Redis()
+	global.TOKENBASE = initialize.TokenRedis()
 	engine, err := initialize.InitRouter()
 	if err != nil {
 		log.Fatalln("Could not init router, exit...")
 	}
-	engine.Run(":8080")
+	err = engine.Run(":8080")
+	if err != nil {
+		log.Fatalln("Could not run server! exit...")
+	}
 }

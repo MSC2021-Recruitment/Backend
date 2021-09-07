@@ -106,3 +106,691 @@
 [MSC6069Recruitment] 2021/09/06 - 03:52:13.901	info	Successfully registered data models.
 [MSC6069Recruitment] 2021/09/06 - 03:52:13.902	info	Trying to connect Redis on 127.0.0.1:6379
 [MSC6069Recruitment] 2021/09/06 - 03:52:13.902	info	Successfully connected to Redis:	{"pong": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:14:12.645	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:14:12.654	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:14:12.659	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:14:12.680	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:14:12.681	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:14:12.681	info	Successfully connected to Redis:	{"pong": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:17:57.010	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:17:57.011	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:17:57.013	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:17:57.032	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:17:57.033	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:17:57.033	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:23:14.025	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:23:14.026	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:23:14.028	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:23:14.048	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:23:14.050	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:23:14.050	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:45:04.688	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:45:04.688	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:45:04.689	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:45:04.692	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:45:04.693	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:45:04.693	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:45:56.505	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:45:56.506	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:45:56.507	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:45:56.521	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:45:56.523	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:45:56.523	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:49:58.424	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:49:58.424	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:49:58.426	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:49:58.453	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:49:58.455	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:49:58.455	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.266	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.267	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.269	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.285	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.286	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.286	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:52:35.286	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:54:32.798	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:54:32.798	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:54:32.800	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:54:32.815	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:54:32.816	info	Admin not found, created it.
+[MSC6069Recruitment] 2021/09/06 - 13:54:33.824	info	New User Registered: 00000000000 admin admin
+[MSC6069Recruitment] 2021/09/06 - 13:54:33.824	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:54:33.824	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 13:57:37.712	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 13:57:37.713	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 13:57:37.715	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 13:57:37.740	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 13:57:37.741	info	Admin not found, created it.
+[MSC6069Recruitment] 2021/09/06 - 13:57:37.741	warn	Super User: admin@xdmsc.club aec2a26e-ce64-4935-7986-1645096c15da
+[MSC6069Recruitment] 2021/09/06 - 13:57:38.756	info	New User Registered: 00000000000 admin admin
+[MSC6069Recruitment] 2021/09/06 - 13:57:38.761	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 13:57:38.761	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.788	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.789	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.791	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.805	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.806	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.807	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:00:36.807	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.542	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.542	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.544	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.559	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.560	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.561	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:06:05.561	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.230	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.230	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.232	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.247	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.249	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.251	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:10:46.253	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.815	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.816	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.818	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.835	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.837	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.838	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:18:32.838	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.142	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.143	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.145	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.168	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.170	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.171	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:21:41.171	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.898	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.899	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.902	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.924	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.927	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.927	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:25:53.928	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.237	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.238	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.240	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.260	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.263	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.264	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:25:58.264	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.614	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.615	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.617	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.638	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.639	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.640	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:26:37.641	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.342	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.343	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.345	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.367	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.369	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.370	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:26:41.370	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.581	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.581	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.583	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.605	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.607	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.608	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:28:40.609	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.282	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.282	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.284	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.303	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.305	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.308	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:31:38.310	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.508	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.508	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.510	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.533	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.534	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.536	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:31:50.536	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.312	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.312	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.314	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.336	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.337	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.338	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 14:40:10.338	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 17:01:05.840	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 17:01:05.842	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 17:01:05.843	info	gorm	{"src": "/home/reverier/Code/Go/MSC2021/src/initialize/database.go:81", "duration": "dial tcp 127.0.0.1:3306: connect: connection refused"}
+[MSC6069Recruitment] 2021/09/06 - 17:01:36.960	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 17:01:36.960	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 17:01:36.973	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 17:01:37.038	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 17:01:37.043	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 17:01:37.044	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 17:01:37.044	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.443	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.443	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.446	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.474	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.476	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.477	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 17:03:46.477	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 17:05:20.618	info	00000000000 admin answered question 你好，世界.
+[MSC6069Recruitment] 2021/09/06 - 17:06:41.588	warn	Get user1's submission of 1 failed: Error 1054: Unknown column 'QuestionID' in 'where clause'
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.034	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.035	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.037	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.064	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.066	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.067	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 17:12:56.067	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 17:12:59.863	warn	Get user1's submission of 1 failed: Error 1054: Unknown column 'QuestionID' in 'where clause'
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.015	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.016	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.018	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.042	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.044	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.045	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 17:13:51.045	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 17:13:54.501	warn	Get user1's submission of 1 failed: Error 1054: Unknown column 'UserID' in 'where clause'
+[MSC6069Recruitment] 2021/09/06 - 17:15:16.303	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 17:15:16.304	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 17:15:16.305	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 17:15:16.356	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 17:15:16.358	info	Admin not found, created it.
+[MSC6069Recruitment] 2021/09/06 - 17:15:16.358	warn	Super User: admin@xdmsc.club a27ecea4-7806-4502-4a39-28a994cd060f
+[MSC6069Recruitment] 2021/09/06 - 17:15:20.619	info	New User Registered: 00000000000 admin admin
+[MSC6069Recruitment] 2021/09/06 - 17:15:20.621	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 17:15:20.621	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 17:17:35.258	warn	Get user1's submission of 1 failed: Error 1054: Unknown column 'UserID' in 'where clause'
+[MSC6069Recruitment] 2021/09/06 - 17:19:03.839	info	00000000000 admin answered question 你好，世界.
+[MSC6069Recruitment] 2021/09/06 - 18:05:08.150	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:05:08.151	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:05:08.153	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:05:08.205	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:05:08.207	info	Admin not found, created it.
+[MSC6069Recruitment] 2021/09/06 - 18:05:08.207	warn	Super User: admin@xdmsc.club 4c7f2933-0e55-400a-6383-33bf66d7e8b6
+[MSC6069Recruitment] 2021/09/06 - 18:05:09.046	info	New User Registered: 00000000000 admin admin
+[MSC6069Recruitment] 2021/09/06 - 18:05:09.046	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:05:09.046	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.565	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.565	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.566	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.571	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.571	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.571	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:06:00.571	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.105	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.105	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.107	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.114	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.114	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.114	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:08:24.114	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:09:09.145	info	00000000000 admin answered question 你好，世界.
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.806	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.807	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.807	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.813	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.813	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.813	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:13:41.813	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:19:40.196	warn	Auth failed, no authentication found
+[MSC6069Recruitment] 2021/09/06 - 18:20:07.168	warn	Auth failed, no authentication found
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.037	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.038	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.039	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.060	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.061	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.062	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:42:06.062	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:42:12.856	warn	Auth failed, no authentication found
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.085	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.085	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.086	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.091	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.091	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.091	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:52:37.091	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.886	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.887	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.888	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.912	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.913	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.914	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:52:44.914	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 18:53:40.309	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 18:53:40.309	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 18:53:40.311	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 18:53:40.330	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 18:53:40.331	info	Admin not found, created it.
+[MSC6069Recruitment] 2021/09/06 - 18:53:40.331	warn	Super User: admin@xdmsc.club 51996b14-182b-4240-4aed-ca47193ffc1f
+[MSC6069Recruitment] 2021/09/06 - 18:53:41.204	info	New User Registered: 00000000000 admin admin
+[MSC6069Recruitment] 2021/09/06 - 18:53:41.204	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 18:53:41.204	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.208	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.208	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.210	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.231	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.232	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.233	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 19:00:21.233	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:04:34.453	info	New User Registered: 19040300024 徐升 web组
+[MSC6069Recruitment] 2021/09/06 - 19:26:57.038	warn	Auth failed, no authentication found
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.372	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.373	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.375	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.396	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.398	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.398	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 19:30:02.398	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.524	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.525	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.526	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.549	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.551	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.552	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 19:30:59.552	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:31:02.898	info	GET Question ID: 1
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.437	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.437	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.438	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.447	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.447	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.448	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 19:32:06.448	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:32:08.558	warn	GET Question Creator Failed: record not found
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.484	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.484	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.486	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.502	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.502	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.503	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 19:32:47.503	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:32:49.661	warn	GET Question Creator 1 Failed: record not found
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.165	info	Initialized Zap logger.
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.166	info	
+===================================================================================
+   MSC Recruitment 2021 Version 0.1-2021.09.06+Canary
+   Powered By Reverier from MSC in XDU with love.
+
+   GitHub Repo: https://github.com/MSC2021-Recruitment/Backend
+
+   If you have some trouble in using it, plz feel free to create an issue.
+   you can also contact author by emailing to reverier.xu@outlook.com.
+===================================================================================
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.168	info	Connected to database: 127.0.0.1:3306
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.189	info	Successfully registered data models.
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.191	info	Database status recovered.
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.191	info	Trying to connect Redis on 127.0.0.1:6379
+[MSC6069Recruitment] 2021/09/06 - 19:33:43.192	info	Successfully connected to Redis:	{"ping": "PONG"}
+[MSC6069Recruitment] 2021/09/06 - 19:33:45.039	warn	GET Question Creator 1 Failed: record not found
+[MSC6069Recruitment] 2021/09/06 - 19:34:25.450	info	19040300024 徐升 answered question 你好，世界.
