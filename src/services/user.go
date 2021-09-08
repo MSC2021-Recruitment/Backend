@@ -109,10 +109,9 @@ func DeleteUser(userId uint) error {
 }
 
 func ChangeUserProfile(req models.User) error {
-	err := global.DATABASE.Model(&models.User{}).
-		Select("*").
+	err := global.DATABASE.Model(&req).
 		Omit("password").
 		Omit("create_at").
-		Updates(&req).Error
+		Updates(req).Error
 	return err
 }

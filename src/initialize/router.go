@@ -54,9 +54,9 @@ func InitRouter() (*gin.Engine, error) {
 			// 当前登录user离开一个组
 			groupRouter.DELETE(":id", api.LeaveGroupHandler)
 		}
+		apiRouter.Use(middleware.LoginRequired())
 		apiRouter.POST("sign", api.UserSignInInterviewHandler) // 面试签到
 		adminRouter := apiRouter.Group("admin")
-		adminRouter.Use(middleware.LoginRequired())
 		adminRouter.Use(middleware.AdminRequired())
 		{
 			// 获取用户列表

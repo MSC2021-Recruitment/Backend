@@ -48,11 +48,11 @@ func JoinGroup(groupId uint, userId uint) error {
 	if err != nil {
 		return err
 	}
-	err = global.DATABASE.Model(&group).Association("Interviewees").Append(user)
+	err = global.DATABASE.Model(&group).Association("Interviewees").Append(&user)
 	if err != nil {
 		return err
 	}
-	err = global.DATABASE.Model(&user).Association("WantedGroups").Append(group)
+	err = global.DATABASE.Model(&user).Association("WantedGroups").Append(&group)
 	return err
 }
 

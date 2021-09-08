@@ -35,7 +35,9 @@ func (queue *InterviewQueue) Add(interviewee *Interviewee) {
 }
 
 func (queue *InterviewQueue) Next() *Interviewee {
-	queue.ActiveInterviewee.Deactivate()
+	if queue.ActiveInterviewee != nil {
+		queue.ActiveInterviewee.Deactivate()
+	}
 	if queue.QueuedInterviewee.Len() == 0 {
 		return nil
 	}
@@ -133,6 +135,7 @@ func (service *InterviewService) AddGroup(groupID uint, groupName string) error 
 
 func StartInterview() error {
 	InterviewServiceInstance.Started = true
+	InterviewServiceInstance.Groups = make(map[uint]*InterviewQueue)
 	var groups []models.Group
 	err := global.DATABASE.Model(&models.Group{}).Find(&groups).Error
 	if err != nil {
@@ -165,6 +168,7 @@ func GetInterviewStatus() (map[string]interface{}, error) {
 }
 
 func UserSignInInterview(id uint) error {
+	global.LOGGER.Sugar().Infof("user %d join interview...", id)
 	if !InterviewServiceInstance.Started {
 		return &ServiceNotStartedError{}
 	}
@@ -174,11 +178,12 @@ func UserSignInInterview(id uint) error {
 		return err
 	}
 	var groups []models.Group
-	err = global.DATABASE.Model(&models.User{}).Where("id = ?", id).Association("WantedGroups").Find(&groups)
+	err = global.DATABASE.Model(&user).Association("WantedGroups").Find(&groups)
 	if err != nil {
 		return err
 	}
 	for _, group := range groups {
+		global.LOGGER.Sugar().Infof("%s join interview queue %s", user.Name, group.Name)
 		if _, ok := InterviewServiceInstance.Groups[group.ID]; ok {
 			InterviewServiceInstance.Groups[group.ID].Add(&Interviewee{
 				UserID: id,
