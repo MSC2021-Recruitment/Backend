@@ -18,6 +18,8 @@ func InitTables(db *gorm.DB) {
 		models.User{},
 		models.Question{},
 		models.Submission{},
+		models.Group{},
+		models.Interview{},
 	)
 	if err != nil {
 		global.LOGGER.Error("register table failed", zap.Any("err", err))

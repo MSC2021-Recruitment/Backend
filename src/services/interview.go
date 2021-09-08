@@ -139,7 +139,10 @@ func StartInterview() error {
 		return err
 	}
 	for _, group := range groups {
-		InterviewServiceInstance.AddGroup(group.ID, group.Name)
+		err := InterviewServiceInstance.AddGroup(group.ID, group.Name)
+		if err != nil {
+			return err
+		}
 	}
 	return nil
 }
@@ -235,7 +238,7 @@ func AdminUpdateInterviewContent(groupId uint, userId uint, content string) erro
 		UserID:  userId,
 	}
 	var prevInterview models.Interview
-	err := global.DATABASE.Where("group_id = ? AND user_id = ?").First(&prevInterview).Error
+	err := global.DATABASE.Where("group_id = ? AND user_id = ?", groupId, userId).First(&prevInterview).Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
 		interview.Record = content
 		err = global.DATABASE.Create(&interview).Error
@@ -254,7 +257,7 @@ func AdminUpdateInterviewContent(groupId uint, userId uint, content string) erro
 }
 
 func AdminDeleteInterviewContent(groupId uint, userId uint) error {
-	err := global.DATABASE.Where("group_id = ? AND user_id = ?").Delete(models.Interview{}).Error
+	err := global.DATABASE.Where("group_id = ? AND user_id = ?", groupId, userId).Delete(models.Interview{}).Error
 	if err != nil {
 		return err
 	}
