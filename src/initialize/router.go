@@ -3,6 +3,7 @@ package initialize
 import (
 	"MSC2021/src/api"
 	"MSC2021/src/middleware"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -53,7 +54,7 @@ func InitRouter() (*gin.Engine, error) {
 			// 当前登录user离开一个组
 			groupRouter.DELETE(":id", api.LeaveGroupHandler)
 		}
-		apiRouter.POST("sign") // 面试签到
+		apiRouter.POST("sign", api.UserSignInInterviewHandler) // 面试签到
 		adminRouter := apiRouter.Group("admin")
 		adminRouter.Use(middleware.LoginRequired())
 		adminRouter.Use(middleware.AdminRequired())
@@ -106,13 +107,15 @@ func InitRouter() (*gin.Engine, error) {
 			adminInterviewRouter := adminRouter.Group("interview")
 			{
 				// 获取建议面试的user（面试的优先队列实现
-				adminInterviewRouter.GET(":groupId")
+				adminInterviewRouter.GET(":groupId", api.AdminGetSuggestInterviewUserHandler)
+				// 建议面试
+				adminInterviewRouter.POST(":groupId", api.AdminInterviewHandler)
 				// 获取面试信息
-				adminInterviewRouter.GET(":groupId/:userId")
+				adminInterviewRouter.GET(":groupId/:userId", api.AdminGetInterviewContentHandler)
 				// 新建/更新面试信息
-				adminInterviewRouter.POST(":groupId/:userId")
+				adminInterviewRouter.POST(":groupId/:userId", api.AdminUpdateInterviewContentHandler)
 				// 删除面试信息
-				adminInterviewRouter.DELETE(":groupId/:userId")
+				adminInterviewRouter.DELETE(":groupId/:userId", api.AdminDeleteInterviewContentHandler)
 			}
 			// 获取当前面试详情
 			adminRouter.GET("interview-status", api.GetInterviewStatusHandler)
