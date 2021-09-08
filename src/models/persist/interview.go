@@ -17,20 +17,31 @@ type GroupInterviewQueue struct {
 	List          *list.List
 }
 
+type IntervieweeQueueElement struct {
+	status int
+	/*
+		0 - waiting
+		1 - interviewed
+		2 - interviewing in other group
+		3 - interviewing
+	*/
+	Interviewees Interviewee
+}
+
 type GroupInterviewQueueStatus struct {
-	Name          string        `json:"name"`
-	GroupID       uint          `json:"group-id"`
-	CurrentUserID uint          `json:"current-user-id"`
-	Interviewees  []Interviewee `json:"interviewees"`
+	Name          string                    `json:"name"`
+	GroupID       uint                      `json:"group-id"`
+	CurrentUserID uint                      `json:"current-user-id"`
+	Interviewees  []IntervieweeQueueElement `json:"interviewees"`
 }
 
 func (queue *GroupInterviewQueue) Data() *GroupInterviewQueueStatus {
 	if queue.List.Len() == 0 {
 		return nil
 	}
-	var currentInterviewees []Interviewee
+	var currentInterviewees []IntervieweeQueueElement
 	for e := queue.List.Front(); e != nil; e = e.Next() {
-		currentInterviewees = append(currentInterviewees, e.Value.(Interviewee))
+		currentInterviewees = append(currentInterviewees, e.Value.(IntervieweeQueueElement))
 	}
 	return &GroupInterviewQueueStatus{
 		Name:          queue.Name,
@@ -38,27 +49,6 @@ func (queue *GroupInterviewQueue) Data() *GroupInterviewQueueStatus {
 		CurrentUserID: queue.CurrentUserID,
 		Interviewees:  currentInterviewees,
 	}
-}
-
-func (queue *GroupInterviewQueue) DelayInterviewee() bool {
-	afterUser := queue.List.Front()
-	if afterUser == nil {
-		return false
-	}
-	if afterUser = afterUser.Next(); afterUser == nil {
-		return false
-	} else if afterUser = afterUser.Next(); afterUser == nil {
-		afterUser = queue.List.Front().Next()
-	}
-	queue.List.MoveAfter(queue.List.Front(), afterUser)
-	return true
-}
-
-func (queue *GroupInterviewQueue) FirstInterviewee() *Interviewee {
-	if queue.List.Front() == nil {
-		return nil
-	}
-	return queue.List.Front().Value.(*Interviewee)
 }
 
 type InterviewManager struct {
@@ -76,21 +66,47 @@ func (groups *InterviewManager) AddInterviewee(user models.User) {
 	}
 	for _, wantedGroup := range user.WantedGroups {
 		if _, ok := groups.Groups[wantedGroup.ID]; ok {
-			groups.Groups[wantedGroup.ID].List.PushBack(user)
+			groups.Groups[wantedGroup.ID].List.PushBack(IntervieweeQueueElement{
+				status: 0,
+				Interviewees: Interviewee{
+					Name:   user.Name,
+					UserID: user.ID,
+				}})
 		}
 	}
+	return
 }
 
-func (groups *InterviewManager) CanInterview(userId uint) bool {
+func (groups *InterviewManager) CanInterview(userId uint) int {
 	if !groups.Started {
-		return false
+		return -2
 	}
-	for _, queue := range groups.Groups {
+	for i, queue := range groups.Groups {
 		if queue.CurrentUserID == userId {
-			return false
+			return int(i)
 		}
 	}
-	return true
+	return -1
+}
+
+/*
+更新队列元素状态, 并且把现在正在面试的人的状态标记为已面试
+*/
+func (groups *InterviewManager) UpdateIntervieweeStatus(ee *IntervieweeQueueElement) {
+	if ee == nil {
+		return
+	}
+	if ee.status == 3 {
+		ee.status = 1
+	}
+	if ee.status != 1 {
+		if groups.CanInterview(ee.Interviewees.UserID) != -1 { //被人占用
+			ee.status = 2
+		} else {
+			ee.status = 0
+		}
+	}
+	return
 }
 
 func (groups *InterviewManager) RequestInterview(groupId uint) *Interviewee {
@@ -98,25 +114,47 @@ func (groups *InterviewManager) RequestInterview(groupId uint) *Interviewee {
 		return nil
 	}
 	currentGroup := groups.Groups[groupId]
-	userHead := currentGroup.FirstInterviewee()
-	if userHead == nil {
-		return nil
-	}
-	if groups.CanInterview(userHead.UserID) {
-		currentGroup.CurrentUserID = userHead.UserID
-		return userHead
-	} else {
-		currentGroup.DelayInterviewee()
-	}
-	for user := currentGroup.FirstInterviewee(); user.UserID != userHead.UserID; user = currentGroup.FirstInterviewee() {
-		if groups.CanInterview(userHead.UserID) {
-			currentGroup.CurrentUserID = userHead.UserID
-			return userHead
+	for true {
+		var ansInterviewer *IntervieweeQueueElement
+		currentGroup.CurrentUserID = 0
+		for e := currentGroup.List.Front(); e != nil; e = e.Next() {
+			currentElement := e.Value.(*IntervieweeQueueElement)
+			groups.UpdateIntervieweeStatus(currentElement)
+			if currentElement.status == 0 && ansInterviewer == nil { //第一个为0的人称为下一个被面试的 不要break是因为要顺便更新下面的
+				ansInterviewer = currentElement
+			}
+		}
+		if ansInterviewer == nil {
+			return nil
+		}
+		currentGroup.CurrentUserID = ansInterviewer.Interviewees.UserID
+		ansInterviewer.status = 3
+
+		//如果两个线协程同时找到了这个人, 编号较小的主动放弃.
+		if groups.CanInterview(currentGroup.CurrentUserID) > int(groupId) {
+			currentGroup.CurrentUserID = 0
+			ansInterviewer.status = 2
 		} else {
-			currentGroup.DelayInterviewee()
+			return &ansInterviewer.Interviewees
 		}
 	}
+
 	return nil
+}
+
+//一个组面试一个人结束了
+func (groups *InterviewManager) CloseGroupInterview(groupId uint) {
+	if !groups.Started {
+		return
+	}
+	currentGroup := groups.Groups[groupId]
+	for e := currentGroup.List.Front(); e != nil; e.Next() {
+		if e.Value.(*IntervieweeQueueElement).status == 3 {
+			e.Value.(*IntervieweeQueueElement).status = 1
+		}
+	}
+	groups.Groups[groupId].CurrentUserID = 0
+
 }
 
 func (groups *InterviewManager) Start() {
