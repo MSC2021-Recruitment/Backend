@@ -1,12 +1,12 @@
 package config
 
 type ServerConfig struct {
-	JWT          JWT          `yaml:"jwt"`
-	TokenRedis   Redis        `yaml:"token_redis"`
-	QueueRedis   Redis        `yaml:"queue_redis"`
-	LocalStorage LocalStorage `yaml:"local_storage"`
-	Database     MySQL        `yaml:"database"`
-	Zap          Zap          `yaml:"zap"`
+	JWT            JWT          `yaml:"jwt" mapstructure:"jwt"`
+	TokenRedis     Redis        `yaml:"token_redis" mapstructure:"token_redis"`
+	LocalStorage   LocalStorage `yaml:"local_storage" mapstructure:"local_storage"`
+	Database       MySQL        `yaml:"database" mapstructure:"database"`
+	Zap            Zap          `yaml:"zap" mapstructure:"zap"`
+	ReCaptchaToken string       `yaml:"recaptcha_token" mapstructure:"recaptcha_token"`
 }
 
 type MySQL struct {

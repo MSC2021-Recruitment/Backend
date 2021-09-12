@@ -1,6 +1,7 @@
 package api
 
 import (
+	"MSC2021/src/global"
 	"MSC2021/src/models"
 	"MSC2021/src/models/auth"
 	"MSC2021/src/models/requests"
@@ -19,6 +20,14 @@ func LoginHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
+
+	ok := utils.VerifyReCaptcha(req.Token)
+	if !ok {
+		response.RobotTestFailed(ctx)
+		ctx.Abort()
+		return
+	}
+
 	var user *models.User
 	if utils.VerifyEmailFormat(req.Account) {
 		user, err = services.LoginWithEmail(&models.User{
@@ -26,6 +35,7 @@ func LoginHandler(ctx *gin.Context) {
 			Email:    req.Account,
 		})
 	} else if utils.VerifyMobileFormat(req.Account) {
+		global.LOGGER.Info("Log-in with tel: " + req.Account)
 		user, err = services.LoginWithTel(&models.User{
 			Password:  req.Password,
 			Telephone: req.Account,
@@ -44,6 +54,7 @@ func LoginHandler(ctx *gin.Context) {
 	token := utils.NewToken()
 	tokenStr, err := token.CreateToken(auth.TokenClaims{
 		UserID:         user.ID,
+		Name:           user.Name,
 		Admin:          user.Admin,
 		StandardClaims: jwt.StandardClaims{},
 	})
@@ -64,6 +75,14 @@ func RegisterHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
+
+	ok := utils.VerifyReCaptcha(req.Token)
+	if !ok {
+		response.RobotTestFailed(ctx)
+		ctx.Abort()
+		return
+	}
+
 	_, err = services.RegisterWithUser(models.User{
 		Name:      req.Name,
 		Password:  req.Password,

@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  msc2021:
+    build: .
+    user: root
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - .data/msc/logs:/var/log/msc
+      - .:/opt/msc:ro
+      - /tmp:/tmp
+    depends_on:
+      - database
+    networks:
+      default:
+      internal:
+  adminer:
+    image: adminer
+    restart: always
+    networks:
+      default:
+      internal:
+    ports:
+      - "127.0.0.1:8002:8080"
+    volumes:
+      - /tmp:/tmp
+  database:
+    image: mariadb:10.6.4
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=msc-root-sample-password
+      - MYSQL_USER=msc
+      - MYSQL_PASSWORD=msc-sample-password
+      - MYSQL_DATABASE=msc
+    volumes:
+      - .data/mysql:/var/lib/mysql
+    networks:
+      internal:
+    command: [ mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0 ]
+  cache:
+    image: redis:5
+    restart: always
+    volumes:
+      - .data/redis:/data
+    networks:
+      internal:
+  networks:
+    default:
+    internal:
+      internal: true
