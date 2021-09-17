@@ -11,7 +11,14 @@ import (
 )
 
 func GetGroupListHandler(ctx *gin.Context) {
-	ans, err := services.GetGroupList()
+	uid := ctx.DefaultQuery("id", "-1")
+	userId, err := strconv.ParseInt(uid, 10, 32)
+	if err != nil {
+		return
+	}
+	var ans []services.GroupRes
+	ans, err = services.GetGroupList(int(userId))
+
 	if err != nil {
 		responses.FailWithMessage(err.Error(), ctx)
 		ctx.Abort()
@@ -108,7 +115,7 @@ func AdminChangeGroupDetailHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
-	err = services.ChangeGroupDetail(uint(id), req.Name)
+	err = services.ChangeGroupDetail(uint(id), req.Name, req.Description)
 	if err != nil {
 		responses.FailWithMessage(err.Error(), ctx)
 		ctx.Abort()
@@ -141,7 +148,7 @@ func AdminCreateGroupHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
-	err = services.CreateGroup(req.Name)
+	err = services.CreateGroup(req.Name, req.Description)
 	if err != nil {
 		responses.FailWithMessage(err.Error(), ctx)
 		ctx.Abort()
