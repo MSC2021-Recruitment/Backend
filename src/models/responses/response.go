@@ -13,8 +13,10 @@ type Response struct {
 }
 
 const (
-	ERROR   = 7
-	SUCCESS = 0
+	SUCCESS  = 0
+	AUTHFAIL = 1
+	ROBOT    = 2
+	ERROR    = 7
 )
 
 func Result(code int, data interface{}, msg string, c *gin.Context) {
@@ -51,4 +53,12 @@ func FailWithMessage(message string, c *gin.Context) {
 
 func FailWithDetailed(data interface{}, message string, c *gin.Context) {
 	Result(ERROR, data, message, c)
+}
+
+func AuthFailed(c *gin.Context) {
+	Result(AUTHFAIL, map[string]interface{}{}, "Auth Failed.", c)
+}
+
+func RobotTestFailed(c *gin.Context) {
+	Result(ROBOT, map[string]interface{}{}, "You are ROBOT!", c)
 }

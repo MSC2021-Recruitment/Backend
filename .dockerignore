@@ -1,0 +1,13 @@
+.data/
+.git/
+.vscode/
+.idea/
+uploads/
+log/
+
+latest_log
+config.yaml.sample
+docker-compose.yml*
+Dockerfile
+
+main

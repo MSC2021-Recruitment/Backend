@@ -16,8 +16,8 @@ zap:
   stacktrace_key: 'stacktrace'
   log_in_console: true
 
-# redis configuration
-redis:
+# token redis database configuration
+token_redis:
   db: 0
   addr: '127.0.0.1:6379'
   password: ''
@@ -26,14 +26,12 @@ redis:
 database:
   path: '127.0.0.1:3306'
   config_models: 'parseTime=true'
-  db_name: 'MSC'
-  username: 'reverier'
-  password: '<password here>'
+  db_name: 'msc'
+  username: 'msc'
+  password: 'msc-sample-password'
   max_idle_conns: 10
   max_open_conns: 100
   log_mode: false
   log_zap: "warn"
 
-# local configuration
-local_storage:
-  path: 'uploads/file'
+re_captcha_token: 'Google ReCaptcha v3 token here.'

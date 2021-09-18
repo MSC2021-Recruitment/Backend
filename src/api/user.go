@@ -59,7 +59,6 @@ func AdminChangeUserProfileHandler(ctx *gin.Context) {
 		Telephone: userReq.Telephone,
 		QQ:        userReq.QQ,
 		Level:     userReq.Level,
-		Wanted:    userReq.Wanted,
 		Intro:     userReq.Intro,
 	}
 	err = services.ChangeUserProfile(user)
@@ -102,34 +101,6 @@ func AdminChangeUserPasswordHandler(ctx *gin.Context) {
 		return
 	}
 	_, err = services.ChangePassword(uint(id), userReq.Password, userReq.NewPassword)
-	if err != nil {
-		responses.FailWithMessage(err.Error(), ctx)
-		ctx.Abort()
-		return
-	}
-	responses.Ok(ctx)
-}
-
-func AdminCreateUserHandler(ctx *gin.Context) {
-	var userReq requests.CreateUserRequest
-	if err := ctx.ShouldBindJSON(&userReq); err != nil {
-		responses.FailWithMessage(err.Error(), ctx)
-		ctx.Abort()
-		return
-	}
-	user := models.User{
-		Name:      userReq.Name,
-		Email:     userReq.Email,
-		StudentID: userReq.StudentID,
-		Major:     userReq.Major,
-		Admin:     userReq.Admin,
-		Telephone: userReq.Telephone,
-		QQ:        userReq.QQ,
-		Level:     userReq.Level,
-		Wanted:    userReq.Wanted,
-		Intro:     userReq.Intro,
-	}
-	_, err := services.RegisterWithUser(user)
 	if err != nil {
 		responses.FailWithMessage(err.Error(), ctx)
 		ctx.Abort()

@@ -1,5 +1,6 @@
 .idea/
 .vscode/
 config.yaml
+docker-compose.yml
 latest_log
 log/

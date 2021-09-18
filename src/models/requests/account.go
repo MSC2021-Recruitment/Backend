@@ -13,13 +13,13 @@ type ChangeProfileRequest struct {
 	Telephone string `json:"telephone"`
 	QQ        string `json:"qq"`
 	Level     string `json:"level"`
-	Wanted    string `json:"wanted"`
 	Intro     string `json:"intro"`
 }
 
 type LoginRequest struct {
 	Account  string `json:"account"`
 	Password string `json:"password"`
+	Token    string `json:"token"`
 }
 
 type RegisterRequest struct {
@@ -31,6 +31,6 @@ type RegisterRequest struct {
 	Telephone string `json:"telephone"`
 	QQ        string `json:"qq"`
 	Level     string `json:"level"`
-	Wanted    string `json:"wanted"`
 	Intro     string `json:"intro"`
+	Token     string `json:"token"`
 }

@@ -5,6 +5,7 @@ import (
 	"MSC2021/src/models"
 	"MSC2021/src/utils"
 	"errors"
+
 	"gorm.io/gorm"
 )
 
@@ -18,7 +19,7 @@ func RegisterWithUser(req models.User) (res models.User, err error) {
 	}
 	req.Password, _ = utils.HashPassword(req.Password)
 	err = global.DATABASE.Create(&req).Error
-	global.LOGGER.Sugar().Infof("New User Registered: %s %s %s", req.StudentID, req.Name, req.Wanted)
+	global.LOGGER.Sugar().Infof("New User Registered: %s %s", req.StudentID, req.Name)
 	return req, err
 }
 
@@ -64,6 +65,9 @@ func ChangePasswordWithUser(req *models.User, newPassword string) (userInter *mo
 		} else {
 			newPassword, _ = utils.HashPassword(newPassword)
 			err = global.DATABASE.First(&user).Update("password", newPassword).Error
+			if err != nil {
+				return nil, err
+			}
 		}
 	}
 	err = ExpireToken(user.ID)
@@ -94,6 +98,9 @@ func GetUserProfile(userId uint) (models.User, error) {
 func DeleteUser(userId uint) error {
 	user := models.User{ID: userId}
 	err := global.DATABASE.Delete(&user).Error
+	if err != nil {
+		return err
+	}
 	err = ExpireToken(userId)
 	if err != nil {
 		return err
@@ -102,10 +109,9 @@ func DeleteUser(userId uint) error {
 }
 
 func ChangeUserProfile(req models.User) error {
-	err := global.DATABASE.Model(&models.User{}).
-		Select("*").
+	err := global.DATABASE.Model(&req).
 		Omit("password").
 		Omit("create_at").
-		Updates(&req).Error
+		Updates(req).Error
 	return err
 }
