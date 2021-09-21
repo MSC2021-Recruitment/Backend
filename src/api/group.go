@@ -58,6 +58,7 @@ func LeaveGroupHandler(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
+	// test
 	claimsRaw, exists := ctx.Get("claims")
 	if !exists {
 		responses.FailWithMessage("Not login yet.", ctx)
